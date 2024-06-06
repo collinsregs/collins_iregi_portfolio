@@ -7,12 +7,14 @@ import Education from './components/pages/education'
 import Hero from "./components/pages/hero"
 import Project from './components//pages/projects'
 import Terminal from './components/pages/terminal'
-
+import FlowField from './components/pages/flow_field'
 
 
 function App() {
   return (
     <div className="app">
+      <FlowField className="flow-field" />
+      <div className="content">
       <div className='flex margin'>
       <div className="left-section fixed"> 
       <Title/>
@@ -26,11 +28,11 @@ function App() {
       <div className="left-section">
       </div>
       <div className="right-section">
-        <Terminal/>
         <About/>
       <Education/>
       <Project/>
         </div>
+      </div>
       </div>
     </div>
   );

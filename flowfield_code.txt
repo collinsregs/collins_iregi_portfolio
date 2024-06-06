@@ -1,0 +1,75 @@
+import React, { useEffect, useRef, useState } from "react";
+import p5 from "p5";
+
+const FlowField = () => {
+  const canvasRef = useRef(null);
+  const [numParticles, setNumParticles] = useState(1);
+  const [noiseStrength, setNoiseStrength] = useState(0.5);
+  const [noiseScale, setNoiseScale] = useState(100);
+
+  let noisefunction; // Declare a simple variable for the noise function
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    new p5((p) => {
+      p.setup = () => {
+        p.createCanvas(window.innerWidth, window.innerHeight);
+        noisefunction = p.noise; // Assign the noise function to the variable
+      };
+      
+
+      p.draw = () => {
+
+        const particles = [];
+        for (let i = 0; i < numParticles; i++) {
+          const loc = {
+            x: p.random(0, window.innerWidth),
+            y: p.random(0, window.innerHeight),
+          };
+          const angle = p.random(Math.PI * 2);
+          const dir = { x: Math.cos(angle), y: Math.sin(angle) };
+          const speed = p.random() * 1.5 + 0.5; // Adjust speed range here
+          particles.push({ loc, dir, speed });
+        }
+
+        particles.forEach((particle) => {
+          const { x, y } = particle.loc;
+
+          // Access noise function from noisefunction
+          const noiseVal = noisefunction(x / noiseScale, y / noiseScale);
+
+          // Update particle direction based on noise and current direction
+          const angle = noiseVal * Math.PI * 2 * noiseStrength;
+          particle.dir.x = Math.cos(angle);
+          particle.dir.y = Math.sin(angle);
+
+          // Update particle location based on direction and speed
+          const vel = { x: particle.dir.x * particle.speed, y: particle.dir.y * particle.speed };
+          particle.loc.x += vel.x;
+          particle.loc.y += vel.y;
+
+          // Wrap around window boundaries for continuous flow
+          particle.loc.x = (particle.loc.x + window.innerWidth) % window.innerWidth;
+          particle.loc.y = (particle.loc.y + window.innerHeight) % window.innerHeight;
+
+          // Draw the particle (optional)
+          p.fill(255); // Adjust color as desired
+          p.ellipse(particle.loc.x, particle.loc.y, 2, 2);
+        });
+      };
+    }, 
+    canvas
+  );
+
+    // Cleanup function to prevent memory leaks on unmount
+    return () => {
+      // Clean up any resources if needed
+    };
+  }, []);
+
+  return (
+    <div ref={canvasRef} width={window.innerWidth} height={window.innerHeight} className="flowfield"/>
+  );
+};
+
+export default FlowField;

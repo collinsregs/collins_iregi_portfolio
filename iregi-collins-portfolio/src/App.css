@@ -1,5 +1,7 @@
-
 .app{
+  margin: 0;
+}
+.content{
   margin-top:5%;
   margin-left: 5%;
   margin-right: 5%;
@@ -104,7 +106,7 @@ li{
   -moz-border-radius: 1rem;
   -ms-border-radius: 1rem;
   -o-border-radius: 1rem;
-  overflow: hidden;
+  /* overflow: hidden; */
   flex-direction: column;
 }
 .terminal-top-ribbon{
@@ -114,15 +116,18 @@ li{
   justify-content: center;
   align-items: center;
   width: 100%;
+  padding-top: 0.5rem;
+  border-bottom:1px solid rgba(0, 0, 0, 0.2);
   
 }
 .terminal-text-area{
   height: 100%;
   width: auto;
   padding-top: 2%;
-  padding-bottom: 2%;
+  padding-bottom: 5%;
   padding-left: 5%;
   padding-right: 5%;
+  overflow-y: auto;
 }
 .dummy-keyboard{
   opacity: 0;
@@ -144,7 +149,6 @@ li{
   animation: blink 1s step-start 0s infinite;
 }
 .terminal-output {
-  overflow-y: hidden;
   overflow: auto;
 }
 
@@ -165,4 +169,22 @@ li{
 
 .success {
   color: #8dd39e;
+}
+.no-such{
+  margin-bottom: 1rem;
+}
+.code{
+  color: #5b5f65;
+  font-weight: 500;
+}
+
+pre{
+  color: #8789ff;
+}
+
+.flowfield{
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
