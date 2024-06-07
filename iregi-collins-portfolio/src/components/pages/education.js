@@ -1,5 +1,5 @@
 export default function education(){
-    return<div className="margin">
+    return<div className="content-card">
        <span className='heading-2 margin'>Education</span>
         <ul className='margin'>
 <li>- **Bachelor of Science in Computer Science**, University of Nairobi, 2018 - 2022</li>

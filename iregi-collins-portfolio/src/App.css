@@ -8,6 +8,19 @@
   height: 100vh;
   position: relative;
 }
+.content-card{
+  background-color: hsla(240, 7%, 11%, 0.4i); 
+  /* backdrop-filter: blur(2px); */
+  /* backdrop-filter: brightness(50%); */
+  /* backdrop-filter: invert(100%); */
+  
+  padding: 2%;
+  border-radius:1em;
+  -webkit-border-radius:1em;
+  -moz-border-radius:1em;
+  -ms-border-radius:1em;
+  -o-border-radius:1em;
+}
 .flex{
   display: flex;
 }
@@ -18,6 +31,9 @@
 }
 .right-section{
   width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
 ul{
@@ -49,8 +65,8 @@ a:hover{
   font-size: 1.25rem;
 }
 .margin{
-  margin-bottom:5% ;
-  margin-top: 5%;
+  margin-bottom:1% ;
+  margin-top: 1%;
 }
 .fixed{
   position: fixed;
@@ -184,7 +200,12 @@ pre{
 
 .flowfield{
   z-index: -1;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
+}
+
+.filler{
+  height: 90vh;
+  /* transition: height 0.5s ease; */
 }

@@ -3,6 +3,7 @@ import p5 from "p5";
 
 const FlowField = () => {
   const canvasRef = useRef(null);
+  const p5InstanceRef = useRef(null);
   const [numParticles, setNumParticles] = useState(1000); // Adjust particle count
 
   let scl, cols, rows;
@@ -12,51 +13,54 @@ const FlowField = () => {
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    new p5((p) => {
-      p.setup = () => {
-        p.createCanvas(window.outerWidth, window.outerHeight);
-        scl = p.width / 300; // Adjust scale based on window size
-        cols = Math.floor(p.width / scl);
-        rows = Math.floor(p.height / scl);
+if(!p5InstanceRef.current) {
+  p5InstanceRef.current= new p5((p) => {
+    p.setup = () => {
+      p.createCanvas(window.innerWidth, window.outerHeight);
+      scl = p.width / 150; // Adjust scale based on window size
+      cols = Math.floor(p.width / scl);
+      rows = Math.floor(p.height / scl);
 
-        flowfield = new Array(cols * rows).fill(p.createVector(0, 0, 0));
+      flowfield = new Array(cols * rows).fill(p.createVector(0, 0, 0));
 
 
-        for (let i = 0; i < numParticles; i++) {
-          particles[i] = new Particle(p,scl,cols, rows); // Pass p5 instance to Particle
+      for (let i = 0; i < numParticles; i++) {
+        particles[i] = new Particle(p,scl,cols, rows); // Pass p5 instance to Particle
+      }
+
+      
+    };
+
+    p.draw = () => {
+      let yoff = 0;
+      for (let y = 0; y < rows; y++) {
+        let xoff = 0;
+        for (let x = 0; x < cols; x++) {
+          const index = x + y * cols;
+          const angle = p.noise(xoff, yoff, zoff) * Math.PI * 3;
+          const v = p.createVector(Math.cos(angle), Math.sin(angle));
+          v.setMag(1);
+          flowfield[index] = v;
+          xoff += 0.1;
         }
+        yoff += 0.1;
+      }
 
-        
-      };
+      zoff += 0.0009;
 
-      p.draw = () => {
-        let yoff = 0;
-        for (let y = 0; y < rows; y++) {
-          let xoff = 0;
-          for (let x = 0; x < cols; x++) {
-            const index = x + y * cols;
-            const angle = p.noise(xoff, yoff, zoff) * Math.PI * 4;
-            const v = p.createVector(Math.cos(angle), Math.sin(angle));
-            v.setMag(1);
-            flowfield[index] = v;
-            xoff += 0.1;
-          }
-          yoff += 0.1;
-        }
-
-        zoff += 0.0009;
-
-        for (let i = 0; i < particles.length; i++) {
-          particles[i].follow(flowfield);
-          particles[i].update();
-          particles[i].edges();
-          particles[i].show(p); // Pass p5 instance to show method
-        }
-      };
-    }, canvas);
+      for (let i = 0; i < particles.length; i++) {
+        particles[i].follow(flowfield);
+        particles[i].update();
+        particles[i].edges();
+        particles[i].show(p); // Pass p5 instance to show method
+      }
+    };
+  }, canvas);
+}
 
     // Cleanup function to prevent memory leaks on unmount
     return () => {
+
       // Clean up any resources if needed
     };
   }, []);
@@ -111,7 +115,8 @@ class Particle {
 
   show(p) {
     // Draw the particle (optional)
-    p.fill(255, 255, 255, 100);; // Set fill color with opacity
+    // p.fill('rgba(26, 26, 30, 100)')
+    p.fill(255, 255, 255, 100); // Set fill color with opacity
     p.noStroke();
     p.ellipse(this.pos.x, this.pos.y, 1, 1); // Adjust size as desired
   }

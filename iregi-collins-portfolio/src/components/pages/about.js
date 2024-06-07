@@ -1,5 +1,5 @@
 export default function about(){
-    return <div >
+    return <div className="content-card">
         <div className="margin">
         <span className='heading-2'>About</span>
         </div>

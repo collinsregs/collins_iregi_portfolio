@@ -1,6 +1,6 @@
 
 export default function nav(){
-    return <div className='margin navbar ' >
+    return <div className='margin navbar content-card' >
         <ul>
             <li className="margin"><a href="/">about me</a></li>
             <li><a href="/about">education</a></li>

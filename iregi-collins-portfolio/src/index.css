@@ -4,7 +4,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--color-background);
-  color: #b8c0cc;
+  color: #F2F2F2;
+  /* color: #1A1A1E; */
 }
 a{
   text-decoration: none;
@@ -20,7 +21,8 @@ code {
 }
 :root{
   --color-primary: #b8c0cc;
-  --color-background:#3b5998;
+  --color-background: #1A1A1E;
+  /* --color-background: #F2F2F2; */
   --color-text-primary:#b8c0cc;
   /* --color-text-accent:; */
   --color-2:#435585;

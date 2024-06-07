@@ -1,5 +1,5 @@
 export default function title(){
-    return<div className="vh margin">
+    return<div className="vh margin content-card">
         <p className="margin heading-1">
         Collins Iregi
         </p>
