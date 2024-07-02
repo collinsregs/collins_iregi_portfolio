@@ -1,11 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
 // import React, { useEffect } from 'react';
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
@@ -14,16 +13,17 @@ root.render(
 
 // navbar fadein
 
-window.addEventListener('scroll', () => {
+window.addEventListener("scroll", () => {
   const scrollPosition = window.scrollY;
-  const fadeOutElement = document.querySelector('.navbar');
+  const navElement = document.querySelector(".navbar");
+  const ctaElement = document.querySelector(".cta");
 
-  if (scrollPosition > 10) { // Adjust this value as needed
-    fadeOutElement.classList.add('fade-in');
+  if (scrollPosition > 10) {
+    // Adjust this value as needed
+    navElement.classList.add("nav-active");
+    ctaElement.classList.remove("nav-active");
   } else {
-    fadeOutElement.classList.remove('fade-in');
+    navElement.classList.remove("nav-active");
+    ctaElement.classList.add("nav-active");
   }
 });
-
-
-
