@@ -1,0 +1,27 @@
+[
+  {
+    "title": "2024_School_Project TrendLens",
+    "stack": [ "Python", "R","Shell", "Docker", "Llama2", "Playwright" ],
+    "description": "During my Computer Science undergraduate program, I embarked on an exciting project called “TrendLens.” The goal was to predict emerging trends within the technology industry. Leveraging tools like Playwright and Llama 2, I extracted data from Reddit posts, performed in-depth topic modeling, and implemented classification and trend prediction models using LSTM algorithms. ",
+    "Link":"https://github.com/collinsregs/2024_School_Project.git"
+    ,"photo":"test-photo.jpg"
+  },{
+    "title": "Bookit-Quick",
+    "stack": [ "PHP","Laravel","SQL","SQLite"  ],
+    "description": "As part of a week-long coding challenge, I developed “Bookit-Quick,” a hotel booking application using the Laravel framework. Administrators can efficiently manage hotel rooms—adding, editing, and removing rooms, setting rates, and occupancy limits. Users can browse available rooms, view prices, and make reservations (with a limit of five bookings per user). Upon successful reservation, a confirmation email is sent.",
+    "Link":"https://github.com/collinsregs/Bookit-Quick.git"
+    ,"photo":"test-photo.jpg"
+  },{
+    "title": "InstaFund--web",
+    "stack": [ "Express", "SQL", "auth0", "Daraja API", "ngrok"  ],
+    "description": "My journey led me to create “InstaFund–web,” a robust loan management system for a fintech company. Using Express.js, Auth0, SQLite, and the Daraja API, I built an end-to-end solution—from loan application and approval to disbursement and repayment. Secure user authentication via Auth0 and seamless MPesa transactions through Daraja API make this system efficient and user-friendly",
+    "Link":"https://github.com/collinsregs/InstaFund--web.git"
+    ,"photo":"test-photo.jpg"
+  },{
+    "title": "2023_School_Project CIT_Club",
+    "stack": [ "Flutter", "Firebase", "auth0"   ],
+    "description": "My passion for community-building led me to develop the “CIT_Club” mobile app. Powered by Firebase Cloud Firestore and secured with Auth0, this app fosters connections among MMU CIT club members. Features include a dynamic community forum, a repository of peer-to-peer learning sessions (text and video content), and personalized member profiles. ",
+    "Link":"https://github.com/collinsregs/cit_club.git"
+    ,"photo":"test-photo.jpg"
+  }
+]

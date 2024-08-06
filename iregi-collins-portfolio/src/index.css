@@ -23,10 +23,12 @@ code {
   --color-background: #12121e;
   /* --color-background: #F2F2F2; */
   --color-text-primary: #d3d3d3;
+  --color-accent: var(--color-5);
   /* --color-text-accent:; */
   --color-2: #435585;
   --color-3: #818fb4;
   --color-4: #f5e8c7;
+  --color-5: rgba(1, 249, 199);
 
   --ff-primary: raleway;
   /* --ff-accent:; */

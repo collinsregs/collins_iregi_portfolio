@@ -1,31 +1,39 @@
-export default function projects() {
+export default function Projects() {
+  let data = require("..//data/projects.json");
+
   return (
     <div className="" id="projects">
-      <div className="margin">
-        <span className="heading-2 ">Projects</span>
-        <ul>
-          <li>
-            <p>
-              **Project Management Tool**: A web application that allows teams
-              to collaborate and manage projects effectively. Built with React,
-              Node.js, and MongoDB.
-            </p>{" "}
-          </li>
-          <li>
-            <p>
-              **E-commerce Website**: An online store built with Django and
-              PostgreSQL, featuring user authentication, product search, and
-              secure payment processing.
-            </p>
-          </li>
-          <li>
-            <p>
-              **Weather App**: A mobile app that provides real-time weather
-              updates using the OpenWeatherMap API. Built with React Native.
-            </p>
-          </li>
-        </ul>
-      </div>
+      <span className="heading-2 margin light">Projects</span>
+      <ul className="margin experience-ul">
+        {data.map((project, index) => (
+          <div key={index} className="experience-tile">
+            <header className="experience-header">
+              <div className="img-container">
+                <img
+                  src={`./data/${project.photo}`}
+                  alt={project.title}
+                  className="project-img"
+                />
+              </div>
+            </header>
+            <div className="experience-content">
+              <div className="experience-title ">
+                <a href={project.Link} className="light">
+                  {project.title}
+                </a>
+              </div>
+              <div>{project.description}</div>
+              <div className="stack">
+                {project.stack.map((tech, index) => (
+                  <div key={index} className="stack-item">
+                    {tech}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </ul>
     </div>
   );
 }
