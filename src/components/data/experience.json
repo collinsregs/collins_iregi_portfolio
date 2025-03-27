@@ -1,0 +1,17 @@
+[
+  {
+    "companyPosition": "Data Engineer - Digital Qatalyst",
+    "dateRange": "Aug 2024 - Current",
+    "description": "At Digital Qatalyst, I drive digital transformation by optimizing client processes through data and AI solutions. My work involves designing and managing ETL pipelines, ensuring data stewardship, and establishing clear data lineage across platforms such as Ardoq and Avolution ABACUS. Additionally, I leverage Power BI and Microsoft Fabric to develop insightful analytics and reporting solutions that enhance decision-making and operational efficiency"
+  },
+  {
+    "companyPosition": "Machine Learning Engineer - DataAnnotation.tech",
+    "dateRange": "Feb 2024 - Aug 2024",
+    "description": "Employed at DataAnnotation.tech, training AI models to tackle complex data science challenges. Utilizes model selection techniques to optimize performance. Continuously updates knowledge and skills to improve model training methods. Successfully trained multiple AI models, optimized performance through advanced selection techniques, contributed to an efficient AI training pipeline, and collaborated on data annotation and labeling for AI model training."
+  },
+  {
+    "companyPosition": "Network Engineer Intern - Starnet Systems",
+    "dateRange": "May 2023 - Aug 2023",
+    "description": "Designed and implemented robust network infrastructures, ensured network security, and optimized performance while collaborating with the IT team at Starnet Systems. Skilled in diagnosing and resolving network issues, minimizing downtime and enhancing system reliability. Maintained comprehensive network configuration records, design alterations, and troubleshooting steps. Implemented security measures to protect network integrity and prevent unauthorized access. Regularly monitored network performance and made adjustments for optimal speed and efficiency. Worked closely with IT team members to understand network needs and provide solutions."
+  }
+]

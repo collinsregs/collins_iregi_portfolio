@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: var(--ff-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  /* color: #1A1A1E; */
+  font-size: 1rem;
+  line-height: 140%;
+}
+a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: var(--color-text-primary);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+:root {
+  --color-primary: #b8c0cc;
+  --color-background: #12121e;
+  /* --color-background: #F2F2F2; */
+  --color-text-primary: #d3d3d3;
+  --color-accent: var(--color-5);
+  /* --color-text-accent:; */
+  --color-2: #435585;
+  --color-3: #818fb4;
+  --color-4: #f5e8c7;
+  --color-5: rgba(1, 249, 199);
+
+  --ff-primary: raleway;
+  /* --ff-accent:; */
+  --ff-terminal: fira-code;
+  font-size: 16px;
+}
+html {
+  font-size: 16px;
+}
