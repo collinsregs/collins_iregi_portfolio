@@ -4,7 +4,7 @@ import p5 from "p5";
 const FlowField = ({ isMinimalView }) => {
   const canvasRef = useRef(null);
   const p5InstanceRef = useRef(null);
-  const [numParticles, setNumParticles] = useState(10000); // Adjust particle count
+  const [numParticles, setNumParticles] = useState(5000); // Adjust particle count
 
   let scl, cols, rows;
   let flowfield;
@@ -99,6 +99,7 @@ class Particle {
     this.scl = scl; // Store scl for later use
     this.cols = cols; // Store cols for later use
     this.rows = rows;
+    this.opacity = 255;
   }
 
   follow(flowfield) {
@@ -144,7 +145,8 @@ class Particle {
 
   show(p) {
     // Draw the particle (optional)
-    p.fill("rgba(255, 255, 255,0.03)"); // Set fill color with opacity
+     this.opacity *= 0.99;
+    p.fill("rgba(255, 255, 255,0.01)"); // Set fill color with opacity
     p.noStroke();
     p.ellipse(this.pos.x, this.pos.y, 1, 1); // Adjust size as desired
   }

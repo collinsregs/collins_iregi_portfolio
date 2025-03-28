@@ -13,7 +13,7 @@ export default function footer({ onEyeClick,isMinimalView }) {
             <Tooltip id="eye" style={{ backgroundColor: "#12121e", color: "rgba(1, 249, 199)"}} />
             <div className="footer-socials ">
                 <a 
-                href="https://github.com/yourusername" 
+                href="https://github.com/collinsregs" 
                 target="_blank" 
                 rel="noopener" 
                 className='social-link footer-box'
@@ -35,7 +35,7 @@ export default function footer({ onEyeClick,isMinimalView }) {
                     <FontAwesomeIcon icon={faLinkedin} className='footer-icon ' />
                 </a>
                 <a 
-                href="mailto:your.email@example.com" 
+                href="mailto:collinsregs@gmail.com" 
                 className='social-link footer-box'
                 data-tooltip-id="email"
                 data-tooltip-content="Email"
