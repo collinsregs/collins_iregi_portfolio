@@ -22,6 +22,7 @@
 }
 .flex {
   display: flex;
+  /* overflow: auto; */
 }
 .left-section {
   width: 30vw;
@@ -74,6 +75,7 @@ width: 100%;
   height: fit-content;
   line-height: 4.5rem;
   margin: 0;
+  margin-bottom: .2 rem;
   padding: 0;
   color: var(--color-accent);
   text-align: center;
@@ -438,4 +440,68 @@ strong {
 .footer {
   visibility: visible !important;
   opacity: 1 !important;
+}
+.mobile-filler{
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .flex {
+    display: flex;
+    flex-direction: column;
+  }
+  .left-section {
+    width: 80vw;
+    flex: 1;
+  }
+  .right-section {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  .fixed {
+    position: relative;
+    top: 0;
+  }
+  .navbar, .cta {
+    max-height: 500px; /* Use max-height instead of height */
+    opacity: 1;
+    visibility: visible;
+    transition: 
+      max-height 0.2s ease-in-out,
+      opacity 0.1s ease-in-out,
+      visibility 0.5s ease-in-out;
+    overflow: auto;
+  }
+  .navbar {
+display: none;
+  }
+  .navbar.nav-active, .cta.nav-active {
+    max-height: 500px; /* Set a reasonable maximum height */
+    opacity: 1;
+    visibility: visible;
+  }
+  .filler {
+   display: none;
+  }
+  .extra{
+    display: none;
+  }
+  .mobile-sizing{
+    height: 100%;
+  }
+  .content-card{
+    height: fit-content;
+  }
+  .mobile-filler{
+    display: block;
+    height: 100%;
+  }
+  .heading-1{
+    margin-bottom: 1rem;
+  }
+  .experience-header{
+    display: none;
+  }
 }

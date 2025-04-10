@@ -80,9 +80,10 @@ const FlowField = ({ isMinimalView }) => {
   return (
     <div
       ref={canvasRef}
-      width={window.innerWidth}
-      height={window.innerHeight}
+      width="100vw" 
+      height="100vh" 
       className="flowfield"
+      style={{ width: '100vw', height: '100vh' }}
     />
   );
 };

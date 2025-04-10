@@ -59,7 +59,7 @@ function App() {
     <div className="app">
       <FlowField isMinimalView={isMinimalView} className="flow-field" />
       <div className={`content ${isMinimalView ? 'minimal-view' : ''}`}>
-        <div  className="flex margin ">
+        <div  className="flex margin mobile-sizing">
           <div className="left-section fixed content-card">
             <Title />
             <Hero />
@@ -68,11 +68,12 @@ function App() {
               <Navbar activeSection={activeSection} />
             </div>
           </div>
-          <div className="right-section"></div>
+          <div className="mobile-filler"></div>
+          <div className="right-section extra"></div>
         </div>
         <div>
           <div  className="flex ">
-            <div className="left-section"></div>
+            <div className="left-section extra"></div>
             <div className="right-section">
               <Filler />
               <div className="content-card flex-column">

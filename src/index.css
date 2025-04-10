@@ -8,6 +8,7 @@ body {
   /* color: #1A1A1E; */
   font-size: 1rem;
   line-height: 140%;
+  /* overflow: hidden; */
 }
 a {
   text-decoration: none;
