@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/collins_iregi_portfolio/static/css/main.02f056b1.css",
+    "main.js": "/collins_iregi_portfolio/static/js/main.503654f4.js",
+    "index.html": "/collins_iregi_portfolio/index.html",
+    "main.02f056b1.css.map": "/collins_iregi_portfolio/static/css/main.02f056b1.css.map",
+    "main.503654f4.js.map": "/collins_iregi_portfolio/static/js/main.503654f4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.02f056b1.css",
+    "static/js/main.503654f4.js"
+  ]
+}
