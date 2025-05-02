@@ -28,6 +28,6 @@
     "stack": [ "Flutter", "Firebase", "auth0"   ],
     "description": "My passion for community-building led me to develop the “CIT_Club” mobile app. Powered by Firebase Cloud Firestore and secured with Auth0, this app fosters connections among MMU CIT club members. Features include a dynamic community forum, a repository of peer-to-peer learning sessions (text and video content), and personalized member profiles. ",
     "Link":"https://github.com/collinsregs/cit_club.git"
-    ,"photo":"test-photo.jpg"
+    ,"photo":"mmu.jpg"
   }
 ]

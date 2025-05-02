@@ -4,7 +4,7 @@ import p5 from "p5";
 const FlowField = ({ isMinimalView }) => {
   const canvasRef = useRef(null);
   const p5InstanceRef = useRef(null);
-  const [numParticles, setNumParticles] = useState(5000); // Adjust particle count
+  const [numParticles, setNumParticles] = useState(10000); // Adjust particle count
 
   let scl, cols, rows;
   let flowfield;
@@ -22,7 +22,7 @@ const FlowField = ({ isMinimalView }) => {
     p5InstanceRef.current = new p5((p) => {
       p.setup = () => {
         p.createCanvas(window.innerWidth, window.outerHeight);
-        scl = p.width / 300; // Adjust scale based on window size
+        scl = p.width / 400; // Adjust scale based on window size
         cols = Math.floor(p.width / scl);
         rows = Math.floor(p.height / scl);
 
@@ -50,7 +50,7 @@ const FlowField = ({ isMinimalView }) => {
           yoff += 0.1;
         }
 
-        zoff += 0.00003; //rate of change
+        zoff += 0.0005; //rate of change
 
         for (let i = 0; i < particles.length; i++) {
           particles[i].follow(flowfield);
@@ -116,7 +116,7 @@ class Particle {
     force.add(this.vel);
     force.limit(0.5); 
     const randomForce = this.p.createVector(
-      this.p.random(-0.05, 0.05), 
+      this.p.random(-0.08, 0.08), 
       this.p.random(-0.05, 0.05)
     );
 
@@ -147,7 +147,7 @@ class Particle {
   show(p) {
     // Draw the particle (optional)
      this.opacity *= 0.99;
-    p.fill("rgba(255, 255, 255,0.01)"); // Set fill color with opacity
+    p.fill("rgba(255, 255, 255,0.03)"); // Set fill color with opacity
     p.noStroke();
     p.ellipse(this.pos.x, this.pos.y, 1, 1); // Adjust size as desired
   }
