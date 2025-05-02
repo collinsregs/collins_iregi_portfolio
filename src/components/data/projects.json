@@ -4,7 +4,7 @@
     "stack": [ "React","Express","Flask","Gramformer" ],
     "description": "Docuboost is a web application that utilizes the power of artificial intelligence to assist you in proofreading your documents. It highlights potential mistakes, allowing you to easily identify and correct them, ensuring your writing is polished and error-free. ",
     "Link":"https://github.com/collinsregs/DQ-assesment-1"
-    ,"photo":"test-photo.jpg"
+    ,"photo":"Frame-505.svg"
   },{
     "title": "TrendLens",
     "stack": [ "Python", "R","Shell", "Docker", "Llama2", "Playwright" ],
