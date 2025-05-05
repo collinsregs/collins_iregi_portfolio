@@ -1,5 +1,13 @@
 [
-  {
+  
+    {
+      "title": "Kenya Law AI",
+      "stack": [ "neo4j","RAG","PEFT","Mistral 7B" ],
+      "description": "My current project, Kenya Law AI, addresses the critical need for increased legal literacy within the Kenyan populace.This initiative involves the systematic collection and structuring of Kenyan legal data into a Neo4j graph database.This knowledge base serves a dual purpose: firstly, it acts as the foundation for fine-tuning a small yet powerful Mistral 7B large language model using Parameter-Efficient Fine-Tuning (PEFT) techniques.Secondly, it provides a reliable source of information for Retrieval-Augmented Generation (RAG), significantly reducing the potential for AI hallucinations and ensuring accurate legal information retrieval.<br /><br />As this is an ongoing project, I am actively seeking advice and contributions on this approach. Feel free to explore the codebase and contribute on GitHub. Your insights and collaboration are highly welcome!",
+      "Link":"https://github.com/collinsregs/Kenya-Law-AI",
+      "photo":"law.png"
+    }
+  ,{
     "title": "Docuboost",
     "stack": [ "React","Express","Flask","Gramformer" ],
     "description": "Docuboost is a web application that utilizes the power of artificial intelligence to assist you in proofreading your documents. It highlights potential mistakes, allowing you to easily identify and correct them, ensuring your writing is polished and error-free. ",
@@ -10,19 +18,19 @@
     "stack": [ "Python", "R","Shell", "Docker", "Llama2", "Playwright" ],
     "description": "During my Computer Science undergraduate program, I embarked on an exciting project called “TrendLens.” The goal was to predict emerging trends within the technology industry. Leveraging tools like Playwright and Llama 2, I extracted data from Reddit posts, performed in-depth topic modeling, and implemented classification and trend prediction models using LSTM algorithms. ",
     "Link":"https://github.com/collinsregs/2024_School_Project.git"
-    ,"photo":"test-photo.jpg"
+    ,"photo":"trendlense.png"
   },{
     "title": "Bookit-Quick",
     "stack": [ "PHP","Laravel","SQL","SQLite"  ],
     "description": "As part of a week-long coding challenge, I developed “Bookit-Quick,” a hotel booking application using the Laravel framework. Administrators can efficiently manage hotel rooms—adding, editing, and removing rooms, setting rates, and occupancy limits. Users can browse available rooms, view prices, and make reservations (with a limit of five bookings per user). Upon successful reservation, a confirmation email is sent.",
     "Link":"https://github.com/collinsregs/Bookit-Quick.git"
-    ,"photo":"test-photo.jpg"
+    ,"photo":"bookit-quick.png"
   },{
     "title": "InstaFund",
     "stack": [ "Express", "SQL", "auth0", "Daraja API", "ngrok"  ],
     "description": "My journey led me to create “InstaFund”, a robust loan management system for a fintech company. Using Express.js, Auth0, SQLite, and the Daraja API, I built an end-to-end solution—from loan application and approval to disbursement and repayment. Secure user authentication via Auth0 and seamless MPesa transactions through Daraja API make this system efficient and user-friendly",
     "Link":"https://github.com/collinsregs/InstaFund--web.git"
-    ,"photo":"test-photo.jpg"
+    ,"photo":"instantfundry.png"
   },{
     "title": "CIT_connect",
     "stack": [ "Flutter", "Firebase", "auth0"   ],

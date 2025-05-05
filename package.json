@@ -2,7 +2,7 @@
   "name": "iregi-collins-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yourusername.github.io/collins_iregi_portfolio",
+  "homepage": "https://collinsregs.github.io/",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",

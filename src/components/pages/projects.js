@@ -28,7 +28,8 @@ const Projects = forwardRef((props, ref) => {
                   {project.title}   <FontAwesomeIcon icon={faUpRightFromSquare} /></div>
                 </a>
               </div>
-              <div>{project.description}</div>
+              <div dangerouslySetInnerHTML={{ __html: project.description }}></div>
+              {/* <div>{project.description}</div> */}
               <div className="stack">
                 {project.stack.map((tech, index) => (
                   <div key={index} className="stack-item">
